@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pi.md",
+                "file": "Cpp/어서오시게 모험가여.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b60f5dfa06dc80b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pi.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pi.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pi.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -171,11 +183,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ec0c202d2af21c65",
+  "active": "82034b410ce56176",
   "lastOpenFiles": [
-    "README.md",
-    "pi.md",
+    "~$워드프로세서 문서.docx",
+    "새 워드프로세서 문서.docx",
     "Cpp/어서오시게 모험가여.md",
+    "Untitled.md",
+    "pi.md",
+    "README.md",
     "Pasted image 20230416221103.png",
     "Cpp"
   ]
