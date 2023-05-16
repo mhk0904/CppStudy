@@ -8,7 +8,6 @@ int main()
 	int selectBookNum = -1;
 	BookData* user = NULL;
 	BookLib book;
-
 	user = CreateLibrary(100);
 
 
@@ -104,7 +103,7 @@ int main()
 			if (listresort(user, seltitle))
 			{
 				cout << "ÀçÁ¤·Ä" << endl;
-				cout << "---------------------------" << endl;
+				cout << "---------------------------" << endl;  
 			}
 			else
 			{
@@ -115,13 +114,11 @@ int main()
 		}
 		case s_End:
 		{
-			if (user != NULL) {
-				if (user->bookLb != NULL) {
-					delete[] user->bookLb;
-					delete(user);
-				}
-			}
-			return 0;
+			if (user->bookLb != NULL) 
+				delete[] user->bookLb;	
+			if (user != NULL ) 
+				delete(user);
+			return 0; 
 			break;
 		}
 		}

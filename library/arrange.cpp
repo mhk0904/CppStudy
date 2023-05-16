@@ -103,7 +103,7 @@ void removeBookData(BookData *book,int pos)
 }
 
 
-bool StrToInt(string sval)	//47~57
+bool StrToIntChack(string sval)	//47~57
 {
 	for (unsigned int i = 0; i < sval.length(); i++)
 	{
@@ -118,7 +118,7 @@ bool SelectMember(BookData* pbook, string selMem)
 	bool chack = false;
 
 	int selint=0;
-	if (StrToInt(selMem)) 
+	if (StrToIntChack(selMem)) 
 	{
 		selint = stoi(selMem);
 	}
@@ -135,7 +135,7 @@ bool SelectMember(BookData* pbook, string selMem)
 			ShowArrList(pbook, i);
 			chack = true;
 		}
-		if (StrToInt(selMem))
+		if (StrToIntChack(selMem))
 		{
 			if (pbook->bookLb[i].page == selint)
 			{
