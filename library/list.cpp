@@ -1,6 +1,6 @@
 
 #include "header.h"
-//#include "public.cpp"
+#include "public.h"
 
 BookHeader* CreateHaderListNode()
 {
@@ -45,11 +45,11 @@ bool AddListElement(BookHeader* pbook, int pos, BookNode node)
 		*newNode = node;
 		newNode->link = NULL;
 
-		preNode = pbook->headernode;
+		preNode = pbook->headernode; // 탐색 시작 위치 >> pbook.headernode 부터 시작
 		for (int i = 0; i < pos; i++)
 			preNode = preNode->link;
 
-		newNode->link = preNode->link;	// nullptr?
+		newNode->link = preNode->link;	
 		preNode->link = newNode;
 
 		pbook->currentlist++;
@@ -89,5 +89,39 @@ bool RemoveListElement(BookHeader* pbook, int pos)
 	}
 }
 
+BookNode* getlistelement(BookHeader* pbook, int pos = 0)
+{
+	BookNode* preturn = NULL;
+	BookNode* pnode = NULL;
+	if (pbook == NULL)
+		return preturn;
+	if (pos < 0 || pos > pbook->currentlist)
+		return preturn;
+	
+	pnode = pbook->headernode;
+	for (int i = 0; i < pos; i++)
+	{
+		pnode = pnode->link;
+	}
+	preturn = pnode;
 
+	return preturn;
+}
 
+/*
+BookHeader* hdnode = NULL;
+BookNode node1;
+BookNode node2;
+BookNode node3;
+
+node2.name = "book";
+
+hdnode = CreateHaderListNode();
+if (AddListElement(hdnode, 0, node1))
+cnt++;
+if (AddListElement(hdnode, 0, node2))
+cnt++;
+if (AddListElement(hdnode, 1, node3))
+cnt++;
+cout << getlistelement(hdnode, 0)->author;
+*/

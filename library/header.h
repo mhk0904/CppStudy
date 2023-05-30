@@ -43,7 +43,7 @@ typedef struct BookArr {
 
 /////////////////////////////////////////
 
-
+//list
 typedef struct Booklink {
 	string	name	,
 			author	;
@@ -53,8 +53,7 @@ typedef struct Booklink {
 }BookNode;
 
 typedef struct BookHD {
-	int maxlist		,
-		currentlist ;
+	int	currentlist ;
 	BookNode* headernode;
 } BookHeader;
 
@@ -90,4 +89,8 @@ bool listresort(BookData* pbook, int ival);
 BookHeader* CreateHaderListNode();
 bool AddListElement(BookHeader* pbook, int pos, BookNode node);
 bool RemoveListElement(BookHeader* pbook, int pos);
+BookNode* getlistelement(BookHeader* pbook, int pos);
 
+//( Circular_list )
+bool LinkCList(BookHeader* pbook, int pos, BookNode pnode);
+bool RemoveCList(BookHeader* pbook, int pos);
