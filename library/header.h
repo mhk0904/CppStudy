@@ -57,9 +57,22 @@ typedef struct BookHD {
 	BookNode* headernode;
 } BookHeader;
 
+////////////////////////////////////////
 
-//template <typename T>
-//void ShowData(T* pbook);
+typedef struct DoubleListNodetype
+{
+	string data;
+	int num;
+	DoubleListNodetype* NextLink;
+	DoubleListNodetype* preLink;
+
+}DoubleListNode;
+
+typedef struct DoubleListtype
+{
+	int currentelement;
+	DoubleListNode* headerNode;
+}DoubleList;
 
 
 //( public )
@@ -94,3 +107,9 @@ BookNode* getlistelement(BookHeader* pbook, int pos);
 //( Circular_list )
 bool LinkCList(BookHeader* pbook, int pos, BookNode pnode);
 bool RemoveCList(BookHeader* pbook, int pos);
+
+
+//( DoubleLinkList )
+DoubleList* CreateDoubleList();
+bool add_DL_Element(DoubleList* plist, int pos, DoubleListNode element);
+bool Remove_DL_Element(DoubleList* plist, int pos);
